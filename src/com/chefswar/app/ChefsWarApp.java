@@ -9,8 +9,8 @@ import java.util.List;
 
 public class ChefsWarApp {
     public static void main(String[] args) {
-        Restaurant r1 = new Restaurant("Pasta Palace");
-        Restaurant r2 = new Restaurant("Curry Corner");
+        Restaurant r1 = new Restaurant("Green Garden");
+        Restaurant r2 = new Restaurant("Hotel tawa");
 
         // Register competitors (observer pattern)
         r1.registerCompetitor(new RestaurantOwner("owner2")::priceDropped);
@@ -18,11 +18,11 @@ public class ChefsWarApp {
 
         // Add dishes to r1
         Arrays.asList(
-                new Dish("Spaghetti", 200),
-                new Dish("Lasagna", 250),
+                new Dish("Paneer kadhai", 200),
+                new Dish("Mutter Paneer", 250),
                 new Dish("Ravioli", 220),
                 new Dish("Fettuccine", 230),
-                new Dish("Penne", 210)
+                new Dish("Tandoor chicken", 210)
         ).forEach(r1::addDish);
 
         // Add dishes to r2
